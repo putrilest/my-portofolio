@@ -9,18 +9,40 @@ export const ThemeContext = createContext({
   setTheme: () => {},
  });
 
+ export const LanguageContext = createContext({
+    language: null,
+    setLanguage: () => {}
+ })
+
+ export const Strings = {
+  en:{
+    blog:"Blog",
+    home:"Home",
+    product:"Products",
+    contact:"Contact",
+    theme:"Theme",
+  },
+  id:{
+    blog:"Profil",
+    home:"Beranda",
+    product:"Produk",
+    contact:"Kontak",
+    theme:"Tema",
+  },
+ }
+
 export default function App() {
-  const [theme, setTheme] = useState("light")
+  const [theme, setTheme] = useState("light");
+  const [language, setLanguage] = useState("en");
+
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <Header />
-      <Outlet />
-      <Footer />
+      <LanguageContext.Provider value={{language, setLanguage}}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </LanguageContext.Provider>
     </ThemeContext.Provider>
-    // <>
-    //   <Header />
-    //   <Outlet />
-    //   <Footer />
-    // </>
   );
 }
