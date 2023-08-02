@@ -1,11 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
 import {BsFillCircleFill} from "react-icons/bs"
 import Products from "./Products"
-import { ThemeContext } from "../App";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
+import {IoIosArrowDropupCircle} from "react-icons/io"
+import { LanguageContext, ThemeContext } from "../App";
+import { Strings } from "../App"; 
+
 
 const Home = () => {
+  const scrollRef = useRef(null);
   const {theme} = useContext(ThemeContext);
+  const {language} = useContext(LanguageContext);
+
+  const backToTopButton = () => {
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    })
+  }
+
   return (
     <main className={theme === "dark" ? "bg-gray-800 text-white" : "bg-zinc-200"}>
       <div className="h-full">
@@ -14,7 +27,7 @@ const Home = () => {
             <img className="rounded-full h-96 tablet:h-72 mobile:h-64 " src="https://static.wixstatic.com/media/c837a6_a5f904abc9224779abfc65cb53fa6ba7~mv2.jpg/v1/crop/x_158,y_151,w_1117,h_1117/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/gettyimages-1284121212-2048x2048_edited_.jpg" alt="" />
           </div>
           <div className="pl-4 pt-12 tablet:pt-6 mobile:pt-4">
-            <h1 className="font-bold text-5xl font-sans tablet:text-4xl mobile:text-3xl">Hello, I am <span className="text-red-400">Lestari👋</span></h1>
+            <h1 className="font-bold text-5xl font-sans tablet:text-4xl mobile:text-3xl">{Strings[language].hello}<span className="text-red-400">Lestari👋</span></h1>
             <div className="text-xl font-bold font-mono tablet:text-lg mobile:text-base">Junior Backend Developer</div> <br />
             <div className="font-bold text-xl font-mono tablet:text-lg mobile:text-base">A Bit About Me</div>
             <div className="tablet:text-sm mobile:text-xs">
@@ -32,6 +45,9 @@ const Home = () => {
           </div>
         </div>
         <Products/>
+      </div>
+      <div className="flex justify-center text-center items-center pb-2">
+        <button className="flex flex-row gap-1 p-2 rounded-3xl hover:bg-red-400 mobile:p-1 mobile:mt-2" ref={scrollRef} onClick={()=> backToTopButton()}><IoIosArrowDropupCircle size={25}/> Back to Top</button>
       </div>
     </main>
   )
