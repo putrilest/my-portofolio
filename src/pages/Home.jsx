@@ -24,7 +24,7 @@ const Home = () => {
       <div className="h-full">
         <div className="mx-36 flex pt-14 tablet:mx-12 mobile:mx-2 mobile:pt-4 mobile:block mobile:text-center">
           <div className="mobile:flex mobile:justify-center">
-            <img className="rounded-full h-96 tablet:h-72 mobile:h-64 " src="https://static.wixstatic.com/media/c837a6_a5f904abc9224779abfc65cb53fa6ba7~mv2.jpg/v1/crop/x_158,y_151,w_1117,h_1117/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/gettyimages-1284121212-2048x2048_edited_.jpg" alt="" />
+            <img className="rounded-full h-96 tablet:h-72 mobile:h-64 " src="./my-foto.png" alt="" />
           </div>
           <div className="pl-4 pt-12 tablet:pt-6 mobile:pt-4">
             <h1 className="font-bold text-5xl font-sans tablet:text-4xl mobile:text-3xl">{Strings[language].hello}<span className="text-red-400">Lestari👋</span></h1>

@@ -8,24 +8,24 @@ const Products = () => {
   const products = [
     {
       id: 1,
-      judul: "Project 1 Infak PUB",
+      judul: "Project 1 Payroll",
       gambar: <SiOpenproject className="h-[60px] w-[100px] hover:text-red-400 tablet:h-[50px] tablet:w-[80px]  mobile:h-[40px] mobile:w-[70px]"/>,
-      deskripsi:"Website yang dibuat untuk bendehara eksternal pub dalam mengelola infak dari alumni sebagai pemasukan pub.",
-      link: "https://github.com/putrilest/projek_infak.git",
+      deskripsi:"Website penggajian toko sederhana yang dibuat dengan Java dan Thymeleaf",
+      link: "https://github.com/putrilest/payroll.git",
     },
     {
       id: 2,
-      judul: "Project 2 Sky Invest",
+      judul: "Project 2 Dapa Electronic Store",
       gambar: <SiPolymerproject className="h-[60px] w-[100px] hover:text-orange-400 tablet:h-[50px] tablet:w-[80px]  mobile:h-[40px] mobile:w-[70px]"/>,
-      deskripsi:"Website yang dikembangkan untuk menyediakan informasi reksadana investasi yang ada di Indonesia. ",
-      link: "https://github.com/putrilest/PROJEKAN-WEB.git",
+      deskripsi:"Program Backend untuk aplikasi electronic store sederhana",
+      link: "https://github.com/putrilest/dapa-electronic-store",
     },
     {
       id: 3,
-      judul: "Project 3 Iphone Store",
+      judul: "Project 3 Infak PUB",
       gambar: <FaProjectDiagram className="h-[60px] w-[100px] hover:text-sky-400  tablet:h-[50px] tablet:w-[80px]  mobile:h-[40px] mobile:w-[70px]"/>,
-      deskripsi:"Websie Store yang menjual berbagai produk iphone seperti handphone, watch, dll.",
-      link: "https://github.com/putrilest/uts-react.git",
+      deskripsi:"Prgram react + javascript sederhana untuk membantu bendahara eksternal dalam mengelola infak PUB",
+      link: "https://github.com/putrilest/infak-pub.git",
     }
   ];
 

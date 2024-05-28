@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="flex flex-row gap-4 py-4 px-8 bottom-0  border-solid border-t-[1px] border-zinc-400 justify-between item-center tablet:text-sm mobile:text-[0.6rem] tablet:px-2 mobile:px-2 mobile:gap-2">
         <div>
           <h3 className="font-bold">Phone</h3>
-          <p className="text-xs mobile:text-[0.50rem]">088-220-1764</p>
+          <p className="text-xs mobile:text-[0.50rem]">0882-2017-6443</p>
         </div>
         <div>
           <h3 className="font-bold">Email</h3>
